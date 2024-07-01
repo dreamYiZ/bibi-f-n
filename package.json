@@ -1,0 +1,37 @@
+{
+  "name": "xgk",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NEXT_PUBLIC_VERSION=$npm_package_version next dev",
+    "build": "cross-env NEXT_PUBLIC_VERSION=$npm_package_version next build",
+    "build:nv": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.15.21",
+    "@mui/material": "^5.15.21",
+    "next": "14.1.0",
+    "ppplog": "^1.1.6",
+    "react": "^18",
+    "react-colorful": "^5.6.1",
+    "react-dom": "^18",
+    "sass": "^1.77.6",
+    "uuid": "^10.0.0",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.11.3",
+    "@cloudflare/workers-types": "^4.20240614.0",
+    "cross-env": "^7.0.3",
+    "vercel": "^34.2.7",
+    "wrangler": "^3.60.3"
+  }
+}
